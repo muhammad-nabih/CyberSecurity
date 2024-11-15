@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Landing Page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="font/font.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="Normalize.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 data-aos="fade-right" class="logo">CyberGuard</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </div>
+            <ul>
+                <li><a href="#home" data-aos="fade-down" data-aos-delay="100">Home</a></li>
+                <li><a href="#introduction" data-aos="fade-down" data-aos-delay="200">Introduction</a></li>
+                <li><a href="#content" data-aos="fade-down" data-aos-delay="300">Content</a></li>
+                <li><a href="#about" data-aos="fade-down" data-aos-delay="700">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="landing">
+        <div class="overlay"></div>
+        <video autoplay loop muted class="background-video">
+            <source src="landingBackground.mp4" type="video/mp4">
+        </video>
+        <div class="container absolute">
+            <h1 data-aos="fade-up">Welcome to CyberGuard</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Protecting Your Digital World</p>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.navbar ul').classList.toggle('show');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.background = 'rgba(21, 18, 17, 0.9)';
+                document.querySelector('.navbar').style.padding = '0.5rem 0';
+            } else {
+                document.querySelector('.navbar').style.background = '#151211';
+                document.querySelector('.navbar').style.padding = '1rem 0';
+            }
+        });
+    </script>
+</body>
+</html>
